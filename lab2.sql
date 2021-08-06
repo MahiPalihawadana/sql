@@ -124,6 +124,14 @@ FROM salesman
 WHERE commission > 0.13
 
 
+-- Q9  total earning of each salesman if the total value of sales made by each salesman is Rs.1000
+
+SELECT s_id, commission * 1000 as total_earning
+FROM salesman
+
+-- joins..............................................................................................
+
+
 
 
 
