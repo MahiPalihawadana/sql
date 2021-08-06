@@ -60,5 +60,34 @@ union
 select *
 from AccType t right outer join Account a on t.typeID = a.typeID
 
+-- left side unmatching tika witrak gannwanm
+
+select *
+from AccType t left outer join Account a on t.typeID = a.typeID
+where a.accountNo is null
 
 
+-- right side unmatching tuples withrak gnna
+
+select *
+from AccType t right outer join Account a on t.typeID = a.typeID
+where t.typeID is null
+
+-- left and right both missing tuples
+select *
+from AccType t left outer join Account a on t.typeID = a.typeID
+where a.accountNo is null
+union
+select *
+from AccType t right outer join Account a on t.typeID = a.typeID
+where t.typeID is null
+
+
+-- natural join
+
+select *
+from AccType  natural join Account 
+
+-- cross join
+select *
+from AccType  cross join Account 
