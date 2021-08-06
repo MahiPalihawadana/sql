@@ -99,3 +99,6 @@ delete from orderTable where ord_no='70009' or ord_no='70002'
 
 update Customer set city='Matara' where c_id='3005'
 update Customer set city='Colombo' , grade =400 where c_id= '3005'
+
+alter table Customer drop column age
+
